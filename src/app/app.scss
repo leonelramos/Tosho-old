@@ -1,0 +1,30 @@
+.drag-zone {
+  -webkit-app-region: drag;
+  align-self: stretch;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 1px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: rgba(201, 201, 201, 0.76);
+}
+
+body,
+html {
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
