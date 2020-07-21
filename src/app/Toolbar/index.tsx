@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Box } from "@chakra-ui/core";
 import MenuBar from "../../components/MenuBar";
 import Minimize from "./Items/Minimize";
 import Maximize from "./Items/Maximize";
@@ -11,7 +11,7 @@ import ConfigModeToggle from "./Items/ConfigModeToggle";
 import SearchBookshelf from "./Items/SearchBookshelf";
 import ToshoInfo from "./Items/ToshoInfo";
 
-const Toolbar = () => {
+const Toolbar = (props) => {
   const options = { className: "toolbar" };
 
   const toolbar = {
@@ -28,8 +28,8 @@ const Toolbar = () => {
   const dragRegion = {
     options: {
       className: "drag-zone",
-      justifyContent: "flex-end",
       flexGrow: 2,
+      alignSelf: "stretch",
     },
     items: [],
   };
@@ -38,7 +38,7 @@ const Toolbar = () => {
     options: {
       justifyContent: "flex-end",
     },
-    items: [<ToshoInfo />],
+    items: [<ToshoInfo size="sm" />],
   };
 
   const windowControls = {
