@@ -5,7 +5,9 @@
   "main": "./dist/main.js",
   "scripts": {
     "dev:e": "NODE_ENV=development webpack --config webpack.electron.config.js --mode development && electron .",
-    "dev:r": "NODE_ENV=development webpack-dev-server --config webpack.react.config.js --mode development"
+    "dev:r": "NODE_ENV=development webpack-dev-server --config webpack.react.config.js --mode development",
+    "format": "prettier \"src/**/*.{js,html}\" --write",
+    "lint": "eslint \"src/**.{js,jsx}\" --quiet"
   },
   "keywords": [],
   "author": "elisealcala",
@@ -16,8 +18,12 @@
     "@babel/preset-react": "^7.9.4",
     "@babel/preset-typescript": "^7.9.0",
     "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
     "electron": "^9.1.0",
     "html-webpack-plugin": "^4.2.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^9.0.2",
+    "style-loader": "^1.2.1",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0"
@@ -28,8 +34,13 @@
     "@emotion/styled": "^10.0.27",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
+    "@types/react-redux": "^7.1.9",
     "emotion-theming": "^10.0.27",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-icons": "^3.10.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5"
   }
 }
