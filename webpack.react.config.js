@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   resolve: {
-    extensions: [".tsx", ".ts", ".js"],
+    extensions: [".ts", ".tsx", ".js", ".jsx", ".sass", ".scss", ".css"],
     mainFields: ["main", "module", "browser"],
   },
   entry: "./src/index.tsx",
@@ -14,14 +14,15 @@ module.exports = {
       {
         test: /\.(js|ts|tsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
+        use: ["babel-loader"],
       },
       {
-        test: /\.scss$/,
-        include: /src/,
+        test: /\.s[ac]ss$/i,
         use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.(png|jp(e*)g|svg)$/,
+        use: ["url-loader"],
       },
     ],
   },
