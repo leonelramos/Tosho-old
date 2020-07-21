@@ -1,6 +1,8 @@
 .drag-zone {
   -webkit-app-region: drag;
   align-self: stretch;
+  background-color: #e5e5e5;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -27,4 +29,23 @@ html {
   margin: 0px;
   padding: 0px;
   height: 100%;
+}
+
+.bookshelf {
+  overflow: auto;
+  padding: 10px;
+}
+
+// Quick fix to align final flex row to the left
+.bookshelf::after {
+  content: "";
+  flex: auto;
+}
+
+.file-frame {
+  max-height: 6cm;
+  max-width: 3.6cm;
+  min-height: 2cm;
+  min-width: 1.2cm;
+  margin: 15px 10px 15px 10px;
 }
