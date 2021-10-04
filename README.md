@@ -1,4 +1,4 @@
-old code, new updated code at https://github.com/leonelramos/tosho-beta
+old code, new updated code at https://github.com/leonelramos/tosho-prototype
 
 
 # Tosho
